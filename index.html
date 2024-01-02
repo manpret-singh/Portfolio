@@ -1,150 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1;"/>
-        <title>Manpreet Portfolio website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" 
-        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <div class="logo">
-                <img src="logo.png" alt="Manpreet">
-            </div>
-            <button class="nav-toggle" aria-label="toggle-navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">My Services</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-                </ul>
-            </nav>
-        </header>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Manpreet Singh - I'm Software Developer.</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./minefavicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.jpg">
+  <link rel="preload" as="image" href="./assets/images/Blog.svg">
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header style="background-color: #92C7CF;">
+    <div class="container" >
+
+      <!-- <a href="#" class="logo">
+        <img src="./assets/images/logo-dark.svg" width="64" height="24" alt="Julia home">
+      </a> -->
+
+      <nav class="navbar" data-navbar >
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" width="64" height="24" alt="Julia home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#" class="navbar-link" >Home</a>
+          </li>
+
+          <li>
+            <a href="#about" class="navbar-link">About</a>
+          </li>
+
+          
+
+          <li>
+            <a href="#experience" class="navbar-link">Experience</a>
+          </li>
+
+          <li>
+            <a href="#projects" class="navbar-link">Projects</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:info@email.com" class="contact-link">gkaur2_be20@thapar.edu</a>
+
+          <a href="tel:001234567890" class="contact-link">=91-98726-32555</a>
+        </div>
+
+        <ul class="social-list">
+
+          <!-- <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li> -->
+
+          <li>
+            <a href="https://www.facebook.com/manpreetsingh.khallar/" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="https://www.linkedin.com/in/manpreet-singh-46671b227/" class="social-link">
+              <ion-icon name="logo-linkedIn"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="https://www.instagram.com/its_manpreet__singh__/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+  
+          <li>
+            <a href="https://github.com/manpret-singh" class="social-link">
+              <ion-icon name="logo-Github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
 
 
-        <!-- Introduction -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                Hi, I am <strong>Manpreet Singh</strong>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <figure class="hero-banner">
+            <img src=".\assets\images\IMG_0337.jpg" width="560" height="540" alt="Julia" class="w-100"
+              data-reveal="top">
+
+            <!-- <img src="./assets/images/hero-shape.svg" width="203" height="91" alt="250+ Projects Done" class="shape"
+              data-reveal="top" data-reveal-delay="0.25s"> -->
+          </figure>
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title" data-reveal="top" data-reveal-delay="0.5s">
+              I'm Software Developer.
             </h1>
-            <p class="section__subtitle section__subtitle--intro">Software Engineer</p>
-            <img src="IMG_0337.jpg" alt="a picture of Manpreet Singh" class="intro__img">
-        </section>
+
+            <p class="section-text" data-reveal="top" data-reveal-delay="0.75s">
+              Hello! I'm Manpreet Singh, final year student at Thapar University, a software engineer having keen interest in making 3D animations.
+            </p>
+
+            <div class="btn-wrapper" data-reveal="top" data-reveal-delay="1s">
+              <a href="https://github.com/manpret-singh" class="btn btn-primary">Visit Github</a>
+
+              <a href="https://drive.google.com/file/d/1dDwPhk5Kn3pSppfhRVHjNsALnCnD5Zul/view?usp=sharing" class="btn btn-secondary">Download Resume</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
 
 
-        <!-- My Services -->
-        <section class="my-services" id="services">
-            <h2 class="section__title section__title--services">What I do</h2>
-            <div class="services">
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about" aria-label="about" style="background-color: #AAD7D9;">
+        <div class="container">
+
+          <div class="wrapper">
+
+            <div data-reveal="left" >
+              <h2 class="h2 section-title">About Me</h2>
+
+              <p class="section-text">
                 
-                <div class="service">
-                    <h3>1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit, recusandae repudiandae, eius aliquam ea praesentium debitis nisi dolorum aperiam optio ipsa minus? Explicabo quis possimus ratione dolore aliquid error est!</p>
-                </div><!-- / service -->
-
-                <div class="service">
-                    <h3>2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi temporibus distinctio doloremque tempore, officiis, ipsum accusantium pariatur at optio illum repellendus quos nihil? Pariatur sit mollitia ratione perspiciatis vero et!</p>
-                </div><!-- / service -->
-
-                <div class="service">
-                    <h3>3</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere vitae animi aperiam reiciendis tempore quos, dicta ea sequi facilis laborum maiores quam asperiores quas in amet saepe. Nihil, atque vel?</p>
-                </div><!-- / service -->
-
-            </div> <!-- / services -->
-
-            <a href="#work" class="btn">My Work</a>
-        </section>
-
-
-        <!-- About me -->
-        <section class="about-me" id="about">
-            <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about">Designer & developer based out of NYC</p>
-            <div class="about-me__body">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsum sint veritatis quia quas omnis beatae molestiae nihil tempore, aliquam soluta a impedit ex, dolorem repudiandae corrupti in aspernatur vero!</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam consequatur consectetur, possimus veritatis dignissimos illo vero iusto ipsa aut deserunt laudantium, sapiente repellat! Nihil, nobis quia. Consequatur non exercitationem omnis?</p>
+              </p>
             </div>
-            <img src="long.jpg" alt="Manpreet Singh standing against a wall">
-        </section>
 
-
-        <!-- My work -->
-        <section class="my-work" id="work">
-            <h2 class="section__title section__title--work">My Work</h2>
-            <p class="section__subtitle section__subtitle--work">A selection of my range of work</p>
             
-            <div class="portfolio">
-                <!-- portfolio 01 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
 
-                <!-- portfolio 02 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+          </div>
 
-                <!-- portfolio 03 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+          <ul class="grid-list" >
 
-                <!-- portfolio 04 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+            <li data-reveal="bottom" >
+              <div class="about-card" >
 
-                <!-- portfolio 05 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+                <div class="card-icon">
+                  <img src="./assets/images/icon-1.svg" width="52" height="52" loading="lazy" alt="web design icon">
+                </div>
 
-                <!-- portfolio 06 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+                <h3 class="h4 card-title">Education</h3>
 
-                <!-- portfolio 07 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+                <p class="card-text">
+                  State Board, 2018 <br> 
+                  10th - 83.84% <br>
+                  State Board, 2020 <br>
+                  12th - 90.00%
+                </p>
 
-                <!-- portfolio 08 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+              </div>
+            </li>
 
-                <!-- portfolio 09 -->
-                <a href="#" class="portfolio__item">
-                    <img src="43.jpg" alt="image" class="portfolio__img">
-                </a>
+            <li data-reveal="bottom" data-reveal-delay="0.25s">
+              <div class="about-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/icon-2.svg" width="52" height="52" loading="lazy" alt="mobile design icon">
+                </div>
+
+                <h3 class="h4 card-title">Bachelor of Engineering</h3>
+
+                <p class="card-text">
+                  Final year student at Thapar Institute of Engineering and Technology , Patiala , Punjab
+                </p>
+
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.5s">
+              <div class="about-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/icon-3.svg" width="52" height="52" loading="lazy"
+                    alt="web development icon">
+                </div>
+
+                <h3 class="h4 card-title">Internship</h3>
+
+                <p class="card-text">
+                  2 month internship at Talent Serve <br> an EdTech company & E-mentoring company which believes in creating impact in individual life by helping them build up their career.
+                </p>
+
+              </div>
+            </li>
+
+            <li data-reveal="bottom" data-reveal-delay="0.75s">
+              <div class="about-card">
+
+                <div class="card-icon">
+                  <img src="./assets/images/icon-4.svg" width="52" height="52" loading="lazy" alt="web seo icon">
+                </div>
+
+                <h3 class="h4 card-title">Contact Details</h3>
+
+                <p class="card-text">
+                  Email - msingh4_be20@thapar.edu<br>
+                  Mobile No. - +91-82840-78803<br>
+                  Address - Patiala, Punjab
+                </p>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #Experience
+      -->
+
+      <section class="section project" aria-labelledby="project-label" id="experience">
+        <div class="container">
+
+          <div class="title-wrapper" data-reveal="top">
+
+            <div>
+              <h2 class="h2 section-title" id="project-label">EXPERIENCE</h2>
+
+              <!-- <p class="section-text">
+                Check out some of my latest projects with creative ideas.
+              </p> -->
+            </div>
+
+            <!-- <a href="#" class="btn btn-secondary">Visit Website</a> -->
+
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card project-card-1" style="background-color: #FBF9F1">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class="card-tag" style="color: #a07cc5">Software Engineer</p>
+
+                  <h3 class="h3 card-title">TALENT SERVE </h3>
+
+                  <p class="card-text">
+                    Developed a software application using Django framework. The application precisely calculates the duration of user login sessions. Designed a user interface using fundamental HTML, CSS, and JavaScript technologies. The interface aims to provide a user-friendly experience for the application's users.
+                  </p>
+
+                  <a href="https://flynovate.in/" class="btn-text" style="color: #a07cc5">
+                    <span class="span">Visit Talent Serve Website</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+                <figure class="card-banner" data-reveal="right" style="margin-bottom: 4%;">
+                  <img src=".\assets\images\talent serve.png" width="650" height="370" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            
+
+
+            </ul>
+            </div>
+            </section>
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <section class="section project" aria-labelledby="project-label" id="projects">
+        <div class="container">
+
+          <div class="title-wrapper" data-reveal="top">
+
+            <div>
+              <h2 class="h2 section-title" id="project-label">Latest Projects</h2>
+
+              <p class="section-text">
+                Check out some of my latest projects with creative ideas.
+              </p>
+            </div>
+
+            <a href="https://github.com/manpret-singh" class="btn btn-secondary">See All Projects</a>
+
+          </div>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card project-card-1" style="background-color: #E5E1DA">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class="card-tag" style="color: #a07cc5">Machine Learning</p>
+
+                  <h3 class="h3 card-title">Movie Recommender System</h3>
+
+                  <p class="card-text">
+                    Developed a sophisticated content based movie recommender system utilizing feature extraction as the core machine learning algorithm in python. Used streamlit for its frontend.
+                  </p>
+
+                  <a href="https://github.com/manpret-singh/Movie-Recommender-System" class="btn-text" style="color: #a07cc5">
+                    <span class="span">See Project</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+                <figure class="card-banner" data-reveal="right" style="margin-bottom: 4%;">
+                  <img src=".\assets\images\movierecommender.jpg" width="650" height="370" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-2" style="background-color: #FBF9F1">
+
+                <div class="card-content" data-reveal="right">
+
+                  <p class=" card-tag" style="color: #3f78e0">Web Development And NLP</p>
+
+                  <h3 class="h3 card-title">Product Review Summarizer</h3>
+
+                  <p class="card-text">
+                    Created a web app to summarize the reviews of a product from websites Amazon and YouTube. Developed the website using Python and the Django framework for backend, and CSS and HTML for frontend. Made use of YouTube API to fetch reviews of most relevant videos and used scrapy for scraping reviews
+from Amazon.
+                  </p>
+
+                  <a href="#" class="btn-text" style="color: #3f78e0">
+                    <span class="span">See Project</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+                <figure class="card-banner" data-reveal="left">
+                  <img src=".\assets\images\Screenshot 2023-12-19 004433.png" width="600" height="367" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-3" style="background-color: #E5E1DA">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class=" card-tag" style="color: #7cb798">Web Development</p>
+
+                  <h3 class="h3 card-title">Space Journey Website</h3>
+
+                  <p class="card-text">
+                    This is a solution to the [Space tourism website challenge on Frontend Mentor]. My challenge wass to build out a multi-page space tourism website and get it looking as close to the given design as possible. I used HTML, CSS and JS to solve this challenge.
+                  </p>
+
+                  <a href="https://manpret-singh.github.io/space-tour-website/" class="btn-text" style="color: #7cb798">
+                    <span class="span">See Project</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/project 3.png" width="600" height="367" loading="lazy" alt="Web Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card project-card-4" style="background-color: #FBF9F1">
+
+                <div class="card-content" data-reveal="left">
+
+                  <p class=" card-tag" style="color: #d16b86">Blender</p>
+
+                  <h3 class="h3 card-title">Particle Sysytem</h3>
+
+                  <p class="card-text">
+                    Made an 3D animation of text changing to particles behaving like smoke and a snake made of particles moving through 1 lakh particles with properties like self collision, collision and gravity.
+                  </p>
+
+                  <a href="https://drive.google.com/file/d/1vPJyCR5JwAsoRU2ejzCJZW5_CLJlxCnT/view?usp=sharing" class="btn-text" style="color: #d16b86">
+                    <span class="span">See Project</span>
+
+                    <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                  </a>
+
+                </div>
+
+                <figure class="card-banner" data-reveal="right">
+                  <img src="./assets/images/project4.png" width="620" height="370" loading="lazy" alt="Mobile Design"
+                    class="w-100">
+                </figure>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact" aria-label="contact" id="contact">
+        <div class="container">
+
+          <div class="contact-card" style="background-color: #f1f5fd;">
+
+            <div class="contact-content" data-reveal="left">
+
+              <div class="card-icon">
+                <img src="./assets/images/icon-5.svg" width="44" height="44" loading="lazy" alt="envelop icon">
+              </div>
+
+              <h2 class="h2 section-title">Feel free to contact</h2>
+
+              <p class="section-text">
+                Have any questions? Reach out to me from
+                this contact form and I will get back to you shortly.
+              </p>
 
             </div>
-        </section>
+
+            <form action="" class="contact-form" data-reveal="right">
+
+              <div class="input-wrapper">
+                <input type="text" name="name" placeholder="Name *" required class="input-field">
+
+                <input type="email" name="email_address" placeholder="Email *" required class="input-field">
+              </div>
+
+              <textarea name="message" placeholder="Message *" required class="input-field"></textarea>
+
+              <button type="submit" class="btn btn-secondary">Send message</button>
+
+            </form>
+
+          </div>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
 
 
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:hello@jain.dev" class="footer__link">hello@jain.dev</a>
-            <ul class="social-list">
-                <li class="social-list__item"><a class="social-list__link"
-                href="https://codepen.io"><i class="fab fa-codepen"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link"
-                href="https://dribbble.com"><i class="fab fa-dribbble"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link"
-                href="https:youtube.com//"><i class="fab fa-youtube"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link"
-                href="https://github.com"><i class="fab fa-github"></i></a></li>
-            </ul>
-        </footer>
-        <script src="index.js"></script>
-    </body>
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <!-- <p class="copyright">
+        © 2022 codewithsadee. All rights reserved.
+      </p> -->
+
+      <ul class="social-list">
+
+        <!-- <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li> -->
+
+        <li>
+          <a href="https://www.facebook.com/manpreetsingh.khallar/" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.linkedin.com/in/manpreet-singh-46671b227/" class="social-link">
+            <ion-icon name="logo-linkedIn"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.instagram.com/its_manpreet__singh__/" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/manpret-singh" class="social-link">
+            <ion-icon name="logo-Github"></ion-icon>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
